@@ -27,6 +27,7 @@ SOURCES += src/Messwerk.cpp \
     src/rotation.cpp \
     src/light.cpp \
     src/proximity.cpp \
+    src/pressuresensor.cpp \
     src/satelliteposwidget.cpp \
     src/satelliteinfo.cpp \
     src/activateable.cpp \
@@ -48,6 +49,7 @@ OTHER_FILES += qml/Messwerk.qml \
     qml/pages/LightPage.qml \
     qml/pages/GyroPage.qml \
     qml/pages/AccelPage.qml \
+    qml/pages/PressurePage.qml \
     qml/Constants.js \
     qml/pages/PlotTestPage.qml \
     qml/pages/RotationPage.qml \
@@ -70,6 +72,7 @@ HEADERS += \
     src/plotwidget.h \
     src/rotation.h \
     src/light.h \
+    src/pressuresensor.h \
     src/proximity.h \
     src/satelliteposwidget.h \
     src/satelliteinfo.h \

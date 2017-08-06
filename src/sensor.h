@@ -18,6 +18,7 @@ public:
         Accelerometer,
         Gyroscope,
         Magnetometer,
+        PressureSensor,
         Rotation,
         Light,
         Proximity

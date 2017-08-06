@@ -85,6 +85,11 @@
         <source>Light &amp; Proximity</source>
         <translation>Światła i Zbliżeniowy</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/FirstPage.qml" line="83"/>
+        <source>Pressure Sensor</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GyroPage</name>
@@ -328,6 +333,29 @@
         <location filename="../qml/pages/PositionPage.qml" line="195"/>
         <source>Grid: </source>
         <translation>Siatka: </translation>
+    </message>
+</context>
+<context>
+    <name>PressurePage</name>
+    <message>
+        <location filename="../qml/pages/PressurePage.qml" line="44"/>
+        <source>Stop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/PressurePage.qml" line="44"/>
+        <source>Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/PressurePage.qml" line="44"/>
+        <source> logging</source>
+        <translation type="unfinished"> logowanie</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/PressurePage.qml" line="61"/>
+        <source>Pressure Sensor</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -78,6 +78,12 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("LightPage.qml"))
                 color: ((lightsensor.isLogging || proximitysensor.isLogging) ? Theme.highlightColor : Theme.primaryColor)
             }
+            Button {
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: qsTr("Pressure Sensor")
+                onClicked: pageStack.push(Qt.resolvedUrl("PressurePage.qml"))
+                color: (pressuresensor.isLogging ? Theme.highlightColor : Theme.primaryColor)
+            }
         }
     }
 }

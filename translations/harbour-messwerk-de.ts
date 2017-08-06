@@ -69,6 +69,10 @@
         <source>Position</source>
         <translation>Position</translation>
     </message>
+    <message>
+        <source>Pressure Sensor</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GyroPage</name>
@@ -263,6 +267,25 @@
     <message>
         <source>deg./min./sec.</source>
         <translation>Grad/Min./Sek.</translation>
+    </message>
+</context>
+<context>
+    <name>PressurePage</name>
+    <message>
+        <source>Stop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> logging</source>
+        <translation type="unfinished"> Aufzeichnung</translation>
+    </message>
+    <message>
+        <source>Pressure Sensor</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

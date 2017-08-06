@@ -32,6 +32,7 @@ public:
     static const unsigned PART_PROXIMITY     = (1 << 5);
     static const unsigned PART_SATELLITES    = (1 << 6);
     static const unsigned PART_POSITION      = (1 << 7);
+    static const unsigned PART_PRESSURESENSOR= (1 << 8);
 
     ~WakeLock();
 

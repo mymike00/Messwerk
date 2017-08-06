@@ -13,6 +13,7 @@ unsigned Sensor::sensorTypeToWakeLockPart(Sensor::Type type)
         case Accelerometer: return WakeLock::PART_ACCELEROMETER;
         case Gyroscope:     return WakeLock::PART_GYROSCOPE;
         case Magnetometer:  return WakeLock::PART_MAGNETOMETER;
+        case PressureSensor:return WakeLock::PART_PRESSURESENSOR;
         case Rotation:      return WakeLock::PART_ROTATION;
         case Light:         return WakeLock::PART_LIGHT;
         case Proximity:     return WakeLock::PART_PROXIMITY;
