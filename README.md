@@ -1,4 +1,3 @@
-Messwerk
-========
+# MessWerk UT
 
-A SailfishOS Application for reading Sensors
+An Application for reading Sensors, ported from SFOS
