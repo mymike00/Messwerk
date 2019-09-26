@@ -32,7 +32,9 @@ execute_process(
     OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
-add_executable(${PROJECT_NAME} main.cpp)
+include_directories(src)
+link_directories(src)
+add_executable(${PROJECT_NAME} main.cpp src/Messwerk.cpp)
 qt5_use_modules(${PROJECT_NAME} Gui Qml Quick QuickControls2 Sensors Positioning)
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX})
 

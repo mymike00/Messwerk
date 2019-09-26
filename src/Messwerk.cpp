@@ -9,7 +9,7 @@
 #include <QGuiApplication>
 #include <QTimer>
 #include <QGeoSatelliteInfoSource>
-#include <QQmlApplicationEngine> 
+#include <QQmlApplicationEngine>
 
 #include "accelerometer.h"
 #include "gyroscope.h"
@@ -28,7 +28,7 @@
 #include "satellitestrengthwidget.h"
 
 
-int main(int argc, char *argv[])
+int messwerk(int argc, char *argv[])
 {
     int result = 0;
 
