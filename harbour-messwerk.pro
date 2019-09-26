@@ -12,6 +12,17 @@
 # The name of your application
 TARGET = harbour-messwerk
 
+#load Ubuntu specific features
+load(ubuntu-click)
+
+# specify the manifest file, this file is required for click
+# packaging and for the IDE to create runconfigurations
+UBUNTU_MANIFEST_FILE=manifest.json.in
+
+# specify translation domain, this must be equal with the
+# app name in the manifest file
+# UBUNTU_TRANSLATION_DOMAIN="harbour-messwerk.mymike00"
+
 QT += sensors positioning gui qml quick
 
 QMAKE_CXXFLAGS += -std=c++0x
@@ -50,19 +61,24 @@ QML_FILES = qml/Messwerk.qml \
     qml/pages/PositionPage.qml \
     qml/Theme.js \
     qml/Constants.js \
+    harbour-messwerk.apparmor \
+    harbour-messwerk.desktop \
+    harbour-messwerk.png
 
-OTHER_FILES += translations/*.ts $$QML_FILES
-
-qml_files.path = $$[QT_INSTALL_QML]
+qml_files.path = /app
 qml_files.files = $$QML_FILES
 
 INSTALLS += qml_files
 
+# Default rules for deployment.
+target.path = $${UBUNTU_CLICK_BINARY_PATH}
+INSTALLS+=target
+
 # to disable building translations every time, comment out the
 # following CONFIG line
-TRANSLATIONS += translations/harbour-messwerk-de.ts \
-    translations/harbour-messwerk-pl.ts \
-    translations/harbour-messwerk-sv.ts
+#TRANSLATIONS += translations/harbour-messwerk-de.ts \
+#    translations/harbour-messwerk-pl.ts \
+#    translations/harbour-messwerk-sv.ts
 
 HEADERS += \
     src/accelerometer.h \
@@ -81,5 +97,3 @@ HEADERS += \
     src/settings.h \
     src/position.h \
     src/wakelock.h
-
-

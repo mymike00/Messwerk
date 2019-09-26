@@ -9,6 +9,7 @@
 #include <QGuiApplication>
 #include <QTimer>
 #include <QGeoSatelliteInfoSource>
+#include <QQmlApplicationEngine> 
 
 #include "accelerometer.h"
 #include "gyroscope.h"
@@ -78,4 +79,3 @@ int main(int argc, char *argv[])
 
     return result;
 }
-
