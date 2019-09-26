@@ -12,6 +12,7 @@
 # The name of your application
 TARGET = harbour-messwerk
 
+TEMPLATE = app
 #load Ubuntu specific features
 load(ubuntu-click)
 
@@ -22,6 +23,18 @@ UBUNTU_MANIFEST_FILE=manifest.json.in
 # specify translation domain, this must be equal with the
 # app name in the manifest file
 # UBUNTU_TRANSLATION_DOMAIN="harbour-messwerk.mymike00"
+
+# specify the source files that should be included into
+# the translation file, from those files a translation
+# template is created in po/template.pot, to create a
+# translation copy the template to e.g. de.po and edit the sources
+#UBUNTU_TRANSLATION_SOURCES+= \
+#    $$files(app/*.qml,true) \
+#    $$files(app/*.js,true)
+
+# specifies all translations files and makes sure they are
+# compiled and installed into the right place in the click package
+UBUNTU_PO_FILES+=$$files(po/*.po)
 
 QT += sensors positioning gui qml quick
 
@@ -46,39 +59,21 @@ SOURCES += src/Messwerk.cpp \
     src/position.cpp \
     src/wakelock.cpp
 
-QML_FILES = qml/Messwerk.qml \
-    qml/pages/FirstPage.qml \
-    qml/pages/InfoPage.qml \
-    qml/pages/MagnetPage.qml \
-    qml/pages/LightPage.qml \
-    qml/pages/GyroPage.qml \
-    qml/pages/AccelPage.qml \
-    qml/pages/PressurePage.qml \
-    qml/pages/PlotTestPage.qml \
-    qml/pages/RotationPage.qml \
-    qml/pages/SettingsDialog.qml \
-    qml/pages/SatellitePage.qml \
-    qml/pages/PositionPage.qml \
-    qml/Theme.js \
-    qml/Constants.js \
-    harbour-messwerk.apparmor \
-    harbour-messwerk.desktop \
-    harbour-messwerk.png
+RESOURCES += harbour-messwerk.qrc
 
-qml_files.path = /app
-qml_files.files = $$QML_FILES
+OTHER_FILES = harbour-messwerk.apparmor \
+              harbour-messwerk.desktop \
+              harbour-messwerk.png
 
-INSTALLS += qml_files
+config_files.path = /app
+config_files.files = $${OTHER_FILES}
+message($$config_files.files)
+
+INSTALLS += config_files
 
 # Default rules for deployment.
 target.path = $${UBUNTU_CLICK_BINARY_PATH}
 INSTALLS+=target
-
-# to disable building translations every time, comment out the
-# following CONFIG line
-#TRANSLATIONS += translations/harbour-messwerk-de.ts \
-#    translations/harbour-messwerk-pl.ts \
-#    translations/harbour-messwerk-sv.ts
 
 HEADERS += \
     src/accelerometer.h \

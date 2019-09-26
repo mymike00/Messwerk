@@ -9,7 +9,7 @@
 #include <QGuiApplication>
 #include <QTimer>
 #include <QGeoSatelliteInfoSource>
-#include <QQmlApplicationEngine> 
+#include <QQmlApplicationEngine>
 
 #include "accelerometer.h"
 #include "gyroscope.h"
@@ -34,7 +34,8 @@ int main(int argc, char *argv[])
 
     QString qml = QString("qml/%1.qml").arg("Messwerk");
 
-    QGuiApplication app(argc, argv);
+    QGuiApplication *app = new QGuiApplication(argc, (char**)argv);
+    app->setApplicationName("harbour-messwerk.mymike00");
     QQmlApplicationEngine engine;
 
     qmlRegisterType<PlotWidget>("harbour.messwerk.MesswerkWidgets", 1, 0, "PlotWidget");
@@ -75,7 +76,7 @@ int main(int argc, char *argv[])
 
     refreshTimer.start(100);
 
-    result = app.exec();
+    result = app->exec();
 
     return result;
 }
