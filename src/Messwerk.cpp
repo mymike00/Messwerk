@@ -2,8 +2,6 @@
 #include <QtQuick>
 #endif
 
-#include <sailfishapp.h>
-
 #include <QObject>
 #include <QString>
 #include <QQuickView>
@@ -33,8 +31,10 @@ int main(int argc, char *argv[])
 {
     int result = 0;
 
-    QGuiApplication *app = SailfishApp::application(argc, argv);
-    QQuickView *view = SailfishApp::createView();
+    QString qml = QString("qml/%1.qml").arg("Messwerk");
+
+    QGuiApplication app(argc, argv);
+    QQmlApplicationEngine engine;
 
     qmlRegisterType<PlotWidget>("harbour.messwerk.MesswerkWidgets", 1, 0, "PlotWidget");
     qmlRegisterType<SatellitePosWidget>("harbour.messwerk.MesswerkWidgets", 1, 0, "SatellitePosWidget");
@@ -60,26 +60,21 @@ int main(int argc, char *argv[])
     QObject::connect(&refreshTimer, SIGNAL(timeout()), &rotation, SLOT(refresh()));
     QObject::connect(&refreshTimer, SIGNAL(timeout()), &light, SLOT(refresh()));
 
-    QString qml = QString("qml/%1.qml").arg("Messwerk");
-    view->rootContext()->setContextProperty("accelerometer", &accelerometer);
-    view->rootContext()->setContextProperty("gyroscope", &gyroscope);
-    view->rootContext()->setContextProperty("magnetometer", &magnetometer);
-    view->rootContext()->setContextProperty("rotationsensor", &rotation);
-    view->rootContext()->setContextProperty("lightsensor", &light);
-    view->rootContext()->setContextProperty("pressuresensor", &pressuresensor);
-    view->rootContext()->setContextProperty("proximitysensor", &proximity);
-    view->rootContext()->setContextProperty("satelliteinfo", &satelliteinfo);
-    view->rootContext()->setContextProperty("positionsensor", &position);
-    view->rootContext()->setContextProperty("settings", &(Settings::instance()));
-    view->setSource(SailfishApp::pathTo(qml));
-    view->show();
+    engine.rootContext()->setContextProperty("accelerometer", &accelerometer);
+    engine.rootContext()->setContextProperty("gyroscope", &gyroscope);
+    engine.rootContext()->setContextProperty("magnetometer", &magnetometer);
+    engine.rootContext()->setContextProperty("rotationsensor", &rotation);
+    engine.rootContext()->setContextProperty("lightsensor", &light);
+    engine.rootContext()->setContextProperty("pressuresensor", &pressuresensor);
+    engine.rootContext()->setContextProperty("proximitysensor", &proximity);
+    engine.rootContext()->setContextProperty("satelliteinfo", &satelliteinfo);
+    engine.rootContext()->setContextProperty("positionsensor", &position);
+    engine.rootContext()->setContextProperty("settings", &(Settings::instance()));
+    engine.load(QUrl::fromLocalFile(qml));
 
     refreshTimer.start(100);
 
-    result = app->exec();
-
-    delete view;
-    delete app;
+    result = app.exec();
 
     return result;
 }

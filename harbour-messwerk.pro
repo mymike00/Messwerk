@@ -12,8 +12,7 @@
 # The name of your application
 TARGET = harbour-messwerk
 
-CONFIG += sailfishapp
-QT += sensors positioning
+QT += sensors positioning gui qml quick
 
 QMAKE_CXXFLAGS += -std=c++0x
 QMAKE_LFLAGS += -std=c++0x
@@ -33,17 +32,11 @@ SOURCES += src/Messwerk.cpp \
     src/activateable.cpp \
     src/satellitestrengthwidget.cpp \
     src/settings.cpp \
-    src/wakelock.cpp \
-    src/position.cpp
+    src/position.cpp \
+    src/wakelock.cpp
 
-OTHER_FILES += qml/Messwerk.qml \
-    qml/cover/CoverPage.qml \
+QML_FILES = qml/Messwerk.qml \
     qml/pages/FirstPage.qml \
-    rpm/harbour-messwerk.changes.in \
-    rpm/harbour-messwerk.spec \
-    rpm/harbour-messwerk.yaml \
-    translations/*.ts \
-    harbour-messwerk.desktop \
     qml/pages/InfoPage.qml \
     qml/pages/MagnetPage.qml \
     qml/pages/LightPage.qml \
@@ -57,9 +50,15 @@ OTHER_FILES += qml/Messwerk.qml \
     qml/pages/SatellitePage.qml \
     qml/pages/PositionPage.qml
 
+OTHER_FILES += translations/*.ts $$QML_FILES
+
+qml_files.path = $$[QT_INSTALL_QML]
+qml_files.files = $$QML_FILES
+
+INSTALLS += qml_files
+
 # to disable building translations every time, comment out the
 # following CONFIG line
-CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-messwerk-de.ts \
     translations/harbour-messwerk-pl.ts \
     translations/harbour-messwerk-sv.ts
@@ -79,10 +78,7 @@ HEADERS += \
     src/activateable.h \
     src/satellitestrengthwidget.h \
     src/settings.h \
-    src/wakelock.h \
-    src/position.h
+    src/position.h \
+    src/wakelock.h
 
-# use this for harbour-compliant builds:
-#DEFINES += FOR_HARBOUR
-# and this for all features
-LIBS += -lkeepalive
+

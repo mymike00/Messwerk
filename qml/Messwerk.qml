@@ -28,14 +28,22 @@
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import QtQuick 2.0
-import Sailfish.Silica 1.0
+import QtQuick 2.12
+import QtQuick.Controls 2.12
+
 import "pages"
 
 ApplicationWindow
 {
-    initialPage: Component { FirstPage { } }
-    cover: Qt.resolvedUrl("cover/CoverPage.qml")
+    visible: true
+    StackView {
+        id: pageStackView
+        anchors.fill: parent
+
+        initialItem: FirstPage {
+            property StackView pageStack: pageStackView
+        }
+    }
 }
 
 
