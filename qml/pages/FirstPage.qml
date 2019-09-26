@@ -1,6 +1,8 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
+import "../Theme.js" as Theme
+
 Page {
     id: page
 
@@ -33,7 +35,7 @@ Page {
             id: column
 
             width: page.width
-           // spacing: Theme.paddingLarge
+            spacing: Theme.paddingLarge
 
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter

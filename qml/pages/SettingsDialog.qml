@@ -1,9 +1,11 @@
-import QtQuick 2.0
-import Sailfish.Silica 1.0
+import QtQuick 2.12
+import QtQuick.Controls 2.12
 
+import "../Theme.js" as Theme
 
 Dialog {
     id: dialog
+    header: Label { text: qsTr("Accelerometer") }
 
     onAccepted: {
         settings.loggingPath = loggingPath.text;
@@ -17,11 +19,12 @@ Dialog {
         width: dialog.width
         spacing: Theme.paddingLarge
 
-        DialogHeader {
-            acceptText: qsTr("Save")
+        Button {
+            text: qsTr("Save")
+            onClicked: dialog.accept();
         }
 
-        SectionHeader {
+        Label {
             text: qsTr("Logging")
         }
 
@@ -30,13 +33,13 @@ Dialog {
             width: parent.width
             inputMethodHints: Qt.ImhNoAutoUppercase
             text: settings.loggingPath
-            label: qsTr("Path for sensor logs")
+          //  label: qsTr("Path for sensor logs")
         }
 
-        TextSwitch {
+        Switch {
             id: preventDisplayBlanking
             text: qsTr("Prevent display blanking")
-            description: qsTr("Prevents display blanking on sensor plotting pages")
+            //description: qsTr("Prevents display blanking on sensor plotting pages")
             checked: settings.preventDisplayBlanking
             enabled: !settings.isHarbourVersion
         }

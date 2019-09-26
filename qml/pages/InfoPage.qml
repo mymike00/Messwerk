@@ -1,10 +1,13 @@
-import QtQuick 2.0
-import Sailfish.Silica 1.0
+import QtQuick 2.12
+import QtQuick.Controls 2.12
+
+import "../Theme.js" as Theme
 
 Page {
     id: page
+    header: Label { text: qsTr("Info") }
 
-    SilicaFlickable {
+    Flickable {
         anchors.fill: parent
 
         contentHeight: column.height
@@ -15,9 +18,6 @@ Page {
             width: page.width
             spacing: Theme.paddingLarge
 
-            PageHeader {
-                title: qsTr("Info")
-            }
             Label {
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: qsTr("Created by bytewerk™ Software Inc.")

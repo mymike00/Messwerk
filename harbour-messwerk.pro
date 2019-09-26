@@ -43,12 +43,13 @@ QML_FILES = qml/Messwerk.qml \
     qml/pages/GyroPage.qml \
     qml/pages/AccelPage.qml \
     qml/pages/PressurePage.qml \
-    qml/Constants.js \
     qml/pages/PlotTestPage.qml \
     qml/pages/RotationPage.qml \
     qml/pages/SettingsDialog.qml \
     qml/pages/SatellitePage.qml \
-    qml/pages/PositionPage.qml
+    qml/pages/PositionPage.qml \
+    qml/Theme.js \
+    qml/Constants.js \
 
 OTHER_FILES += translations/*.ts $$QML_FILES
 

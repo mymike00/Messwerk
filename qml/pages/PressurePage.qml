@@ -1,11 +1,13 @@
-import QtQuick 2.0
-import Sailfish.Silica 1.0
+import QtQuick 2.12
+import QtQuick.Controls 2.12
 import harbour.messwerk.MesswerkWidgets 1.0
 
 import "../Constants.js" as Constants
+import "../Theme.js" as Theme
 
 Page {
     id: page
+    header: Label { text: qsTr("Pressure Sensor") }
 
     function formatNumber(n) {
         return '<b>' + n.toFixed(3) + ' Pa</b>';
@@ -27,9 +29,9 @@ Page {
     }
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
-    SilicaFlickable {
+    Flickable {
         anchors.fill: parent
-
+/*
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
             MenuItem {
@@ -45,7 +47,7 @@ Page {
                 onClicked: toggleLogging()
             }
         }
-
+*/
         // Tell SilicaFlickable the height of its content.
         contentHeight: column.height
 
@@ -57,9 +59,6 @@ Page {
             width: page.width
             spacing: Theme.paddingLarge
 
-            PageHeader {
-                title: qsTr("Pressure Sensor")
-            }
             Column {
                 width: parent.width
                 spacing: Theme.paddingSmall
