@@ -10,7 +10,7 @@
 #   - translation filenames have to be changed
 
 # The name of your application
-TARGET = messwerk
+TARGET = harbour-messwerk
 
 TEMPLATE = app
 #load Ubuntu specific features
@@ -22,7 +22,7 @@ UBUNTU_MANIFEST_FILE=manifest.json.in
 
 # specify translation domain, this must be equal with the
 # app name in the manifest file
- UBUNTU_TRANSLATION_DOMAIN="messwerk.mymike00"
+UBUNTU_TRANSLATION_DOMAIN="harbour-messwerk.mymike00"
 
 QT += sensors positioning gui qml quick
 
@@ -89,7 +89,7 @@ INSTALLS+=target
 # following CONFIG line
 TRANSLATIONS += translations/messwerk-de.ts \
     translations/messwerk-pl.ts \
-   translations/messwerk-sv.ts
+    translations/messwerk-sv.ts
 
 HEADERS += \
     src/accelerometer.h \

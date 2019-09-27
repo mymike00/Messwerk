@@ -1,12 +1,12 @@
 {
-    "name": "messwerk.mymike",
+    "name": "harbour-messwerk.mymike00",
     "description": "An Application for reading Sensors, ported from SFOS",
     "architecture": "armhf",
-    "title": "messwerk",
+    "title": "MessWerk",
     "hooks": {
-        "messwerk": {
-            "apparmor": "messwerk.apparmor",
-            "desktop": "messwerk.desktop"
+        "harbour-messwerk": {
+            "apparmor": "harbour-messwerk.apparmor",
+            "desktop": "harbour-messwerk.desktop"
         }
     },
     "version": "0.1.1",
