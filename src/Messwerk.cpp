@@ -32,8 +32,6 @@ int main(int argc, char *argv[])
 {
     int result = 0;
 
-    QString qml = QString("qml/%1.qml").arg("Messwerk");
-
     QGuiApplication *app = new QGuiApplication(argc, (char**)argv);
     app->setApplicationName("harbour-messwerk.mymike00");
     QQmlApplicationEngine engine;
@@ -72,7 +70,7 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("satelliteinfo", &satelliteinfo);
     engine.rootContext()->setContextProperty("positionsensor", &position);
     engine.rootContext()->setContextProperty("settings", &(Settings::instance()));
-    engine.load(QUrl::fromLocalFile(qml));
+    engine.load(QUrl(QStringLiteral("qrc:///qml/Messwerk.qml")));
 
     refreshTimer.start(100);
 

@@ -65,9 +65,8 @@ OTHER_FILES = harbour-messwerk.apparmor \
               harbour-messwerk.desktop \
               harbour-messwerk.png
 
-config_files.path = /app
+config_files.path = /
 config_files.files = $${OTHER_FILES}
-message($$config_files.files)
 
 INSTALLS += config_files
 

@@ -1,5 +1,5 @@
 [Desktop Entry]
-_Name=MessWerk
+Name=MessWerk
 Exec=harbour-messwerk
 Icon=harbour-messwerk
 Terminal=false
