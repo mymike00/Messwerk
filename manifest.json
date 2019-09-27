@@ -1,0 +1,16 @@
+{
+    "name": "messwerk.mateo-salta",
+    "description": "Harbor Messwerk sensor app",
+    "architecture": "armhf",
+    "title": "Messwerk",
+    "hooks": {
+        "messwerk": {
+            "apparmor": "messwerk.apparmor",
+            "desktop":  "messwerk.desktop"
+        }
+    },
+    "version": "1.6",
+    "maintainer": "Mateo Salta <mateo_salta@yahoo.com>",
+    "framework" : "ubuntu-sdk-16.04"
+}
+

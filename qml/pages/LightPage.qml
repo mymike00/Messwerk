@@ -1,5 +1,5 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
+import QtQuick 2.9
+import QtQuick.Controls 2.0
 import harbour.messwerk.MesswerkWidgets 1.0
 
 import "../Constants.js" as Constants

@@ -9,7 +9,12 @@
 #include <QGuiApplication>
 #include <QTimer>
 #include <QGeoSatelliteInfoSource>
+#include <QQuickStyle>
 #include <QQmlApplicationEngine> 
+#include <QCoreApplication>
+#include <QGuiApplication>
+
+
 
 #include "accelerometer.h"
 #include "gyroscope.h"
@@ -33,9 +38,13 @@ int main(int argc, char *argv[])
     int result = 0;
 
     QString qml = QString("qml/%1.qml").arg("Messwerk");
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+qputenv("QT_SCALE_FACTOR", "2.0");
+
 
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
+            QQuickStyle::setStyle("Suru");
 
     qmlRegisterType<PlotWidget>("harbour.messwerk.MesswerkWidgets", 1, 0, "PlotWidget");
     qmlRegisterType<SatellitePosWidget>("harbour.messwerk.MesswerkWidgets", 1, 0, "SatellitePosWidget");

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=messwerk
+Exec=messwerk
+Icon=logo.svg
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+Name[en_US]=Harbor Messwerk

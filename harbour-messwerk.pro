@@ -10,7 +10,7 @@
 #   - translation filenames have to be changed
 
 # The name of your application
-TARGET = harbour-messwerk
+TARGET = messwerk
 
 #load Ubuntu specific features
 load(ubuntu-click)
@@ -21,9 +21,9 @@ UBUNTU_MANIFEST_FILE=manifest.json.in
 
 # specify translation domain, this must be equal with the
 # app name in the manifest file
-# UBUNTU_TRANSLATION_DOMAIN="harbour-messwerk.mymike00"
+ UBUNTU_TRANSLATION_DOMAIN="messwerk.mymike00"
 
-QT += sensors positioning gui qml quick
+QT += sensors positioning gui qml quick quickcontrols2
 
 QMAKE_CXXFLAGS += -std=c++0x
 QMAKE_LFLAGS += -std=c++0x
@@ -61,9 +61,9 @@ QML_FILES = qml/Messwerk.qml \
     qml/pages/PositionPage.qml \
     qml/Theme.js \
     qml/Constants.js \
-    harbour-messwerk.apparmor \
-    harbour-messwerk.desktop \
-    harbour-messwerk.png
+    messwerk.apparmor \
+    messwerk.desktop \
+    logo.svg
 
 qml_files.path = /app
 qml_files.files = $$QML_FILES
@@ -71,14 +71,14 @@ qml_files.files = $$QML_FILES
 INSTALLS += qml_files
 
 # Default rules for deployment.
-target.path = $${UBUNTU_CLICK_BINARY_PATH}
+target.path = /
 INSTALLS+=target
 
 # to disable building translations every time, comment out the
 # following CONFIG line
-#TRANSLATIONS += translations/harbour-messwerk-de.ts \
-#    translations/harbour-messwerk-pl.ts \
-#    translations/harbour-messwerk-sv.ts
+TRANSLATIONS += translations/messwerk-de.ts \
+    translations/messwerk-pl.ts \
+   translations/messwerk-sv.ts
 
 HEADERS += \
     src/accelerometer.h \

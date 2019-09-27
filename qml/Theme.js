@@ -1,8 +1,8 @@
-var paddingSmall = 5;
-var paddingLarge = 10;
+var paddingSmall = 20;
+var paddingLarge = 40;
 
 var fontSizeLarge = 20;
 
-var highlightColor = "blue";
-var secondaryHighlightColor = "green";
+var highlightColor = "orange";
+var secondaryHighlightColor = "purple";
 
