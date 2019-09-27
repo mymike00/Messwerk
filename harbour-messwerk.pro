@@ -10,7 +10,7 @@
 #   - translation filenames have to be changed
 
 # The name of your application
-TARGET = harbour-messwerk
+TARGET = messwerk
 
 TEMPLATE = app
 #load Ubuntu specific features
@@ -22,7 +22,7 @@ UBUNTU_MANIFEST_FILE=manifest.json.in
 
 # specify translation domain, this must be equal with the
 # app name in the manifest file
-# UBUNTU_TRANSLATION_DOMAIN="harbour-messwerk.mymike00"
+ UBUNTU_TRANSLATION_DOMAIN="messwerk.mymike00"
 
 # specify the source files that should be included into
 # the translation file, from those files a translation
@@ -36,7 +36,7 @@ UBUNTU_MANIFEST_FILE=manifest.json.in
 # compiled and installed into the right place in the click package
 UBUNTU_PO_FILES+=$$files(po/*.po)
 
-QT += sensors positioning gui qml quick
+QT += sensors positioning gui qml quick quickcontrols2
 
 QMAKE_CXXFLAGS += -std=c++0x
 QMAKE_LFLAGS += -std=c++0x
@@ -71,8 +71,14 @@ config_files.files = $${OTHER_FILES}
 INSTALLS += config_files
 
 # Default rules for deployment.
-target.path = $${UBUNTU_CLICK_BINARY_PATH}
+target.path = /
 INSTALLS+=target
+
+# to disable building translations every time, comment out the
+# following CONFIG line
+TRANSLATIONS += translations/messwerk-de.ts \
+    translations/messwerk-pl.ts \
+   translations/messwerk-sv.ts
 
 HEADERS += \
     src/accelerometer.h \
