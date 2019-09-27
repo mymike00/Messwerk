@@ -1,4 +1,4 @@
-# NOTICE:
+
 #
 # Application name defined in TARGET has a corresponding QML filename.
 # If name defined in TARGET is changed, the following needs to be done
@@ -24,13 +24,7 @@ UBUNTU_MANIFEST_FILE=manifest.json.in
 # app name in the manifest file
  UBUNTU_TRANSLATION_DOMAIN="messwerk.mymike00"
 
-# specify the source files that should be included into
-# the translation file, from those files a translation
-# template is created in po/template.pot, to create a
-# translation copy the template to e.g. de.po and edit the sources
-#UBUNTU_TRANSLATION_SOURCES+= \
-#    $$files(app/*.qml,true) \
-#    $$files(app/*.js,true)
+QT += sensors positioning gui qml quick
 
 # specifies all translations files and makes sure they are
 # compiled and installed into the right place in the click package
@@ -59,7 +53,24 @@ SOURCES += src/Messwerk.cpp \
     src/position.cpp \
     src/wakelock.cpp
 
-RESOURCES += harbour-messwerk.qrc
+QML_FILES = qml/Messwerk.qml \
+    qml/pages/FirstPage.qml \
+    qml/pages/InfoPage.qml \
+    qml/pages/MagnetPage.qml \
+    qml/pages/LightPage.qml \
+    qml/pages/GyroPage.qml \
+    qml/pages/AccelPage.qml \
+    qml/pages/PressurePage.qml \
+    qml/pages/PlotTestPage.qml \
+    qml/pages/RotationPage.qml \
+    qml/pages/SettingsDialog.qml \
+    qml/pages/SatellitePage.qml \
+    qml/pages/PositionPage.qml \
+    qml/Theme.js \
+    qml/Constants.js \
+    harbour-messwerk.apparmor \
+    harbour-messwerk.desktop \
+    harbour-messwerk.png
 
 OTHER_FILES = harbour-messwerk.apparmor \
               harbour-messwerk.desktop \
