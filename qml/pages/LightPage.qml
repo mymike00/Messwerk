@@ -1,11 +1,13 @@
-import QtQuick 2.0
-import Sailfish.Silica 1.0
+import QtQuick 2.9
+import QtQuick.Controls 2.0
 import harbour.messwerk.MesswerkWidgets 1.0
 
 import "../Constants.js" as Constants
+import "../Theme.js" as Theme
 
 Page {
     id: page
+    header: Label { text: qsTr("Light & Proximity") }
 
     function formatNumber(n) {
         return '<b>' + n.toFixed(3) + ' Lux</b>';
@@ -30,12 +32,12 @@ Page {
     }
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
-    SilicaFlickable {
+    Flickable {
         anchors.fill: parent
 
         // Tell SilicaFlickable the height of its content.
         contentHeight: column.height
-
+/*
         PullDownMenu {
             MenuItem {
                 function toggleLightLogging() {
@@ -62,7 +64,7 @@ Page {
                 onClicked: toggleProximityLogging()
             }
         }
-
+*/
         // Place our content in a Column.  The PageHeader is always placed at the top
         // of the page, followed by our content.
         Column {
@@ -71,10 +73,7 @@ Page {
             width: page.width
             spacing: Theme.paddingLarge
 
-            PageHeader {
-                title: qsTr("Light & Proximity")
-            }
-            SectionHeader {
+            Label {
                 text: qsTr("Brightness")
             }
             Column {
@@ -96,7 +95,7 @@ Page {
                     scaleColor: Theme.secondaryHighlightColor
                 }
             }
-            SectionHeader {
+            Label {
                 text: qsTr("Proximity")
             }
             Label {

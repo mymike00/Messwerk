@@ -1,11 +1,13 @@
-import QtQuick 2.0
-import Sailfish.Silica 1.0
+import QtQuick 2.9
+import QtQuick.Controls 2.0
 import harbour.messwerk.MesswerkWidgets 1.0
 
 import "../Constants.js" as Constants
+import "../Theme.js" as Theme
 
 Page {
     id: page
+    header: Label { text: qsTr("Magnetometer") }
 
     function formatNumber(n) {
         n *= 1e3;
@@ -49,12 +51,12 @@ Page {
     }
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
-    SilicaFlickable {
+    Flickable {
         anchors.fill: parent
 
         // Tell SilicaFlickable the height of its content.
         contentHeight: column.height
-
+/*
         PullDownMenu {
             MenuItem {
                 function toggleLogging() {
@@ -69,7 +71,7 @@ Page {
                 onClicked: toggleLogging()
             }
         }
-
+*/
         // Place our content in a Column.  The PageHeader is always placed at the top
         // of the page, followed by our content.
         Column {
@@ -78,9 +80,6 @@ Page {
             width: page.width
             spacing: Theme.paddingLarge
 
-            PageHeader {
-                title: qsTr("Magnetometer")
-            }
             Column {
                 width: parent.width
                 spacing: Theme.paddingSmall

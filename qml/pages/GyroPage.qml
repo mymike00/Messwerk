@@ -1,11 +1,13 @@
-import QtQuick 2.0
-import Sailfish.Silica 1.0
+import QtQuick 2.9
+import QtQuick.Controls 2.0
 import harbour.messwerk.MesswerkWidgets 1.0
 
 import "../Constants.js" as Constants
+import "../Theme.js" as Theme
 
 Page {
     id: page
+    header: Label { text: qsTr("Gyroscope") }
 
     property bool useRad: false;
 
@@ -60,9 +62,9 @@ Page {
 
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
-    SilicaFlickable {
+    Flickable {
         anchors.fill: parent
-
+/*
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
             MenuItem {
@@ -90,7 +92,7 @@ Page {
                 onClicked: toggleUnit()
             }
         }
-
+*/
         // Tell SilicaFlickable the height of its content.
         contentHeight: column.height
 
@@ -102,9 +104,6 @@ Page {
             width: page.width
             spacing: Theme.paddingLarge
 
-            PageHeader {
-                title: qsTr("Gyroscope")
-            }
             Column {
                 width: parent.width
                 spacing: Theme.paddingSmall

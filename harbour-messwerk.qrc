@@ -1,0 +1,18 @@
+<RCC>
+   <qresource prefix="/">
+      <file>qml/Messwerk.qml</file>
+      <file>qml/pages/FirstPage.qml</file>
+      <file>qml/pages/InfoPage.qml</file>
+      <file>qml/pages/MagnetPage.qml</file>
+      <file>qml/pages/LightPage.qml</file>
+      <file>qml/pages/GyroPage.qml</file>
+      <file>qml/pages/AccelPage.qml</file>
+      <file>qml/pages/PressurePage.qml</file>
+      <file>qml/pages/RotationPage.qml</file>
+      <file>qml/pages/SettingsDialog.qml</file>
+      <file>qml/pages/SatellitePage.qml</file>
+      <file>qml/pages/PositionPage.qml</file>
+      <file>qml/Theme.js</file>
+      <file>qml/Constants.js</file>
+   </qresource>
+</RCC>

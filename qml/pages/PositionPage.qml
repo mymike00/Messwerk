@@ -1,11 +1,13 @@
-import QtQuick 2.0
-import Sailfish.Silica 1.0
+import QtQuick 2.9
+import QtQuick.Controls 2.0
 import harbour.messwerk.MesswerkWidgets 1.0
 
 import "../Constants.js" as Constants
+import "../Theme.js" as Theme
 
 Page {
     id: page
+    header: Label { text: qsTr("Position") }
 
     property bool decimalCoord: true;
 
@@ -82,12 +84,12 @@ Page {
     }
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
-    SilicaFlickable {
+    Flickable {
         anchors.fill: parent
 
         // Tell SilicaFlickable the height of its content.
         contentHeight: column.height
-
+/*
         PullDownMenu {
             MenuItem {
                 function nextCoordFormat() {
@@ -110,7 +112,7 @@ Page {
                 onClicked: togglePositionLogging()
             }
         }
-
+*/
         // Place our content in a Column.  The PageHeader is always placed at the top
         // of the page, followed by our content.
         Column {
@@ -119,10 +121,7 @@ Page {
             width: page.width
             spacing: Theme.paddingLarge
 
-            PageHeader {
-                title: qsTr("Position")
-            }
-            SectionHeader {
+            Label {
                 text: qsTr("WGS84 Coordinates")
             }
             Column {
@@ -158,7 +157,7 @@ Page {
                     text: qsTr('Altitude: ') + page.formatAltitude(positionsensor.altitude)
                 }
             }
-            SectionHeader {
+            Label {
                 text: qsTr("Accuracy")
             }
             Column {
@@ -180,7 +179,7 @@ Page {
                     text: qsTr('Vertical: ') + page.formatAccuracy(positionsensor.vertAccuracy)
                 }
             }
-            SectionHeader {
+            Label {
                 text: qsTr("Maidenhead Locator")
             }
             Column {

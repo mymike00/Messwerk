@@ -1,10 +1,7 @@
 [Desktop Entry]
-Type=Application
-X-Nemo-Application-Type=silica-qt5
-Icon=harbour-messwerk
+Name=MessWerk
 Exec=harbour-messwerk
-Name=Messwerk
-# translation example:
-# your app name in German locale (de)
-Name[de]=Messwerk
-
+Icon=harbour-messwerk
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true

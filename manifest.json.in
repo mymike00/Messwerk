@@ -1,0 +1,15 @@
+{
+    "name": "harbour-messwerk.mymike00",
+    "description": "An Application for reading Sensors, ported from SFOS",
+    "architecture": "armhf",
+    "title": "MessWerk",
+    "hooks": {
+        "harbour-messwerk": {
+            "apparmor": "harbour-messwerk.apparmor",
+            "desktop": "harbour-messwerk.desktop"
+        }
+    },
+    "version": "0.1.1",
+    "maintainer": "Michele Castellazzi <miguel2000@livecom.it>",
+    "framework": "ubuntu-sdk-16.04"
+}
