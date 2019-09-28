@@ -53,24 +53,7 @@ SOURCES += src/Messwerk.cpp \
     src/position.cpp \
     src/wakelock.cpp
 
-QML_FILES = qml/Messwerk.qml \
-    qml/pages/FirstPage.qml \
-    qml/pages/InfoPage.qml \
-    qml/pages/MagnetPage.qml \
-    qml/pages/LightPage.qml \
-    qml/pages/GyroPage.qml \
-    qml/pages/AccelPage.qml \
-    qml/pages/PressurePage.qml \
-    qml/pages/PlotTestPage.qml \
-    qml/pages/RotationPage.qml \
-    qml/pages/SettingsDialog.qml \
-    qml/pages/SatellitePage.qml \
-    qml/pages/PositionPage.qml \
-    qml/Theme.js \
-    qml/Constants.js \
-    harbour-messwerk.apparmor \
-    harbour-messwerk.desktop \
-    harbour-messwerk.png
+RESOURCES += harbour-messwerk.qrc
 
 OTHER_FILES = harbour-messwerk.apparmor \
               harbour-messwerk.desktop \
