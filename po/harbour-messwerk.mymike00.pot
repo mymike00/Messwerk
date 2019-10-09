@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-09 14:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/AccelPage.qml:13
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:66
+msgid "Accelerometer"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:13
+msgid "Select Sensor"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:21
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:11
+msgid "Info"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:48
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:13
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SatellitePage.qml:14
+msgid "Position"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:54
+msgid "GNSS Satellites"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:60
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/RotationPage.qml:13
+msgid "Rotation"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:72
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/GyroPage.qml:13
+msgid "Gyroscope"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:78
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/MagnetPage.qml:13
+msgid "Magnetometer"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:84
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:13
+msgid "Light & Proximity"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:90
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PressurePage.qml:13
+msgid "Pressure Sensor"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:36
+msgid "Created by bytewerk™ Software Inc."
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:41
+msgid "Send beer, pizza and Club Mate to"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:50
+msgid "source code"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:55
+msgid "Credits"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:62
+msgid "Coding: "
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:66
+msgid "Quality assurance: "
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:70
+msgid "Art & Design: "
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:75
+msgid "Translations: "
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:80
+msgid "Port to Ubuntu Touch: "
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:90
+msgid "Brightness"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:112
+msgid "Proximity"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:138
+msgid "WGS84 Coordinates"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:174
+msgid "Accuracy"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:196
+msgid "Maidenhead Locator"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SettingsDialog.qml:10
+msgid "Logging"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SettingsDialog.qml:25
+msgid "Path for sensor logs"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SettingsDialog.qml:59
+msgid "Cancel"
+msgstr ""
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SettingsDialog.qml:64
+msgid "Save"
+msgstr ""

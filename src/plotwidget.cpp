@@ -20,7 +20,7 @@ void PlotWidget::paint(QPainter *painter)
 
     // draw NUM_SCALE_LINES lines for scale indication
     QFont font = painter->font();
-    font.setPixelSize(font.pixelSize() * 0.7);
+    font.setPixelSize(font.pixelSize() * 1.2);
     font.setBold(true);
     painter->setFont(font);
 

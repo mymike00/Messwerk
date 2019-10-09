@@ -1,32 +1,37 @@
 import QtQuick 2.9
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.2
+import Ubuntu.Components 1.3 as UITK
 
 import "../Theme.js" as Theme
 
 Page {
     id: page
+    property var headerHeight: pageH.height
 
-    header: Label {
-        text: qsTr("Select Sensor")
+    header: UITK.PageHeader {
+        id: pageH
+        title: i18n.tr("Select Sensor")
+        trailingActionBar.actions: [
+            // UITK.Action {
+            //     text: i18n.tr("Settings")
+            //     iconName: "settings"
+            //     onTriggered: pageStackView.push(Qt.resolvedUrl("SettingsDialog.qml"))
+            // },
+            UITK.Action {
+                text: i18n.tr("Info")
+                iconName: "info"
+                onTriggered: pageStackView.push(Qt.resolvedUrl("InfoPage.qml"))
+            }
+        ]
     }
 
-    // To enable PullDownMenu, place our content in a SilicaFlickable
     Flickable {
-        anchors.fill: parent
-/*
-        // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
-        PullDownMenu {
-            MenuItem {
-                text: qsTr("Settings")
-                onClicked: pageStack.push(Qt.resolvedUrl("SettingsDialog.qml"))
-            }
-            MenuItem {
-                text: qsTr("Info")
-                onClicked: pageStack.push(Qt.resolvedUrl("InfoPage.qml"))
-            }
+        anchors {
+            fill: parent
+            topMargin: units.gu(2)
+            bottomMargin: units.gu(2)
         }
-*/
-        // Tell SilicaFlickable the height of its content.
+        // Tell Flickable the height of its content.
         contentHeight: column.height
 
         // Place our content in a Column.  The PageHeader is always placed at the top
@@ -36,57 +41,56 @@ Page {
 
             width: page.width
             spacing: Theme.paddingLarge
+            // padding: Theme.paddingSmall
 
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Position")
-                onClicked: pageStack.push(Qt.resolvedUrl("PositionPage.qml"))
+                text: i18n.tr("Position")
+                onClicked: pageStackView.push(Qt.resolvedUrl("PositionPage.qml"))
                 highlighted: satelliteinfo.isLogging
             }
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("GNSS Satellites")
-                onClicked: pageStack.push(Qt.resolvedUrl("SatellitePage.qml"))
+                text: i18n.tr("GNSS Satellites")
+                onClicked: pageStackView.push(Qt.resolvedUrl("SatellitePage.qml"))
                 highlighted: satelliteinfo.isLogging
             }
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Rotation")
-                onClicked: pageStack.push(Qt.resolvedUrl("RotationPage.qml"))
+                text: i18n.tr("Rotation")
+                onClicked: pageStackView.push(Qt.resolvedUrl("RotationPage.qml"))
                 highlighted: rotationsensor.isLogging
             }
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Accelerometer")
-                onClicked: pageStack.push(Qt.resolvedUrl("AccelPage.qml"))
+                text: i18n.tr("Accelerometer")
+                onClicked: pageStackView.push(Qt.resolvedUrl("AccelPage.qml"))
                 highlighted: accelerometer.isLogging
             }
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Gyroscope")
-                onClicked: pageStack.push(Qt.resolvedUrl("GyroPage.qml"))
+                text: i18n.tr("Gyroscope")
+                onClicked: pageStackView.push(Qt.resolvedUrl("GyroPage.qml"))
                 highlighted: gyroscope.isLogging
             }
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Magnetometer")
-                onClicked: pageStack.push(Qt.resolvedUrl("MagnetPage.qml"))
+                text: i18n.tr("Magnetometer")
+                onClicked: pageStackView.push(Qt.resolvedUrl("MagnetPage.qml"))
                 highlighted: magnetometer.isLogging
             }
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Light & Proximity")
-                onClicked: pageStack.push(Qt.resolvedUrl("LightPage.qml"))
+                text: i18n.tr("Light & Proximity")
+                onClicked: pageStackView.push(Qt.resolvedUrl("LightPage.qml"))
                 highlighted: (lightsensor.isLogging || proximitysensor.isLogging)
             }
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Pressure Sensor")
-                onClicked: pageStack.push(Qt.resolvedUrl("PressurePage.qml"))
+                text: i18n.tr("Pressure Sensor")
+                onClicked: pageStackView.push(Qt.resolvedUrl("PressurePage.qml"))
                 highlighted: pressuresensor.isLogging
             }
         }
     }
 }
-
-

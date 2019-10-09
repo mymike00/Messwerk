@@ -1,5 +1,6 @@
 import QtQuick 2.9
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.2
+import Ubuntu.Components 1.3 as UITK
 import harbour.messwerk.MesswerkWidgets 1.0
 
 import "../Constants.js" as Constants
@@ -7,7 +8,15 @@ import "../Theme.js" as Theme
 
 Page {
     id: page
-    header: Label { text: qsTr("Light & Proximity") }
+    header: UITK.PageHeader {
+        id: pageH
+        title: i18n.tr("Light & Proximity")
+        navigationActions: UITK.Action {
+            iconName: "back"
+            text: i18n.tr('Back')
+            onTriggered: page.StackView.view.pop();
+        }
+    }
 
     function formatNumber(n) {
         return '<b>' + n.toFixed(3) + ' Lux</b>';
@@ -33,7 +42,11 @@ Page {
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
     Flickable {
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            topMargin: units.gu(2)
+            bottomMargin: units.gu(2)
+        }
 
         // Tell SilicaFlickable the height of its content.
         contentHeight: column.height
@@ -48,7 +61,7 @@ Page {
                     }
                 }
 
-                text: qsTr("Light sensor: ") + (lightsensor.isLogging ? qsTr("Stop") : qsTr("Start")) + qsTr(" logging")
+                text: i18n.tr("Light sensor: ") + (lightsensor.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
                 onClicked: toggleLightLogging()
             }
             MenuItem {
@@ -60,7 +73,7 @@ Page {
                     }
                 }
 
-                text: qsTr("Proximity sensor: ") + (proximitysensor.isLogging ? qsTr("Stop") : qsTr("Start")) + qsTr(" logging")
+                text: i18n.tr("Proximity sensor: ") + (proximitysensor.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
                 onClicked: toggleProximityLogging()
             }
         }
@@ -74,7 +87,7 @@ Page {
             spacing: Theme.paddingLarge
 
             Label {
-                text: qsTr("Brightness")
+                text: i18n.tr("Brightness")
             }
             Column {
                 width: parent.width
@@ -85,18 +98,18 @@ Page {
                     font.pixelSize: Theme.fontSizeLarge
                     anchors.right: parent.right
                     anchors.rightMargin: Theme.paddingLarge
-                    text: qsTr('Brightness: ') + page.formatNumber(lightsensor.brightness)
+                    text: i18n.tr('Brightness: ') + page.formatNumber(lightsensor.brightness)
                 }
                 PlotWidget {
                     id: bplot
                     width: parent.width
-                    height: 150
+                    height: units.gu(10)
                     plotColor: Theme.highlightColor
                     scaleColor: Theme.secondaryHighlightColor
                 }
             }
             Label {
-                text: qsTr("Proximity")
+                text: i18n.tr("Proximity")
             }
             Label {
                 id: proximityLabel
@@ -111,10 +124,8 @@ Page {
                         return Theme.secondaryColor;
                     }
                 }
-                text: qsTr('Proximity detected')
+                text: i18n.tr('Proximity detected')
             }
         }
     }
 }
-
-

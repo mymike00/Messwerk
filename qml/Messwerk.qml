@@ -29,14 +29,16 @@
 */
 
 import QtQuick 2.9
-import QtQuick.Controls 2.0
-
+import QtQuick.Controls 2.2
+import Ubuntu.Components 1.3 as UITK
 
 import "pages"
 
 ApplicationWindow
 {
     visible: true
+    width: units.gu(40)
+    height: units.gu(60)
     StackView {
         id: pageStackView
         anchors.fill: parent
@@ -46,5 +48,3 @@ ApplicationWindow
         }
     }
 }
-
-

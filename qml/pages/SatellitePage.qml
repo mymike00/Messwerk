@@ -1,5 +1,6 @@
 import QtQuick 2.9
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.2
+import Ubuntu.Components 1.3 as UITK
 import harbour.messwerk.MesswerkWidgets 1.0
 
 import "../Constants.js" as Constants
@@ -7,7 +8,16 @@ import "../Theme.js" as Theme
 
 Page {
     id: page
-    header: Label { text: qsTr("Position") }
+    property var headerHeight: pageH.height
+    header: UITK.PageHeader {
+        id: pageH
+        title: i18n.tr("Position")
+        navigationActions: UITK.Action {
+            iconName: "back"
+            text: i18n.tr('Back')
+            onTriggered: page.StackView.view.pop();
+        }
+    }
 
     function updateSkyPlot() {
         skyPlot.northDirection = rotationsensor.rz;
@@ -34,9 +44,13 @@ Page {
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
     Flickable {
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            topMargin: units.gu(2)
+            bottomMargin: units.gu(2)
+        }
 
-        // Tell SilicaFlickable the height of its content.
+        // Tell Flickable the height of its content.
         contentHeight: column.height
 /*
         PullDownMenu {
@@ -49,7 +63,7 @@ Page {
                     }
                 }
 
-                text: (satelliteinfo.isLogging ? qsTr("Stop") : qsTr("Start")) + qsTr(" logging")
+                text: (satelliteinfo.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
                 onClicked: toggleLogging()
             }
         }
@@ -82,5 +96,3 @@ Page {
         }
     }
 }
-
-

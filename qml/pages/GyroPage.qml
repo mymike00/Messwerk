@@ -1,5 +1,6 @@
 import QtQuick 2.9
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.2
+import Ubuntu.Components 1.3 as UITK
 import harbour.messwerk.MesswerkWidgets 1.0
 
 import "../Constants.js" as Constants
@@ -7,7 +8,15 @@ import "../Theme.js" as Theme
 
 Page {
     id: page
-    header: Label { text: qsTr("Gyroscope") }
+    header: UITK.PageHeader {
+        id: pageH
+        title: i18n.tr("Gyroscope")
+        navigationActions: UITK.Action {
+            iconName: "back"
+            text: i18n.tr('Back')
+            onTriggered: page.StackView.view.pop();
+        }
+    }
 
     property bool useRad: false;
 
@@ -63,7 +72,11 @@ Page {
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
     Flickable {
-        anchors.fill: parent
+          anchors {
+              fill: parent
+              topMargin: units.gu(2)
+              bottomMargin: units.gu(2)
+          }
 /*
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
@@ -76,7 +89,7 @@ Page {
                     }
                 }
 
-                text: (gyroscope.isLogging ? qsTr("Stop") : qsTr("Start")) + qsTr(" logging")
+                text: (gyroscope.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
                 onClicked: toggleLogging()
             }
             MenuItem {
@@ -88,7 +101,7 @@ Page {
                     zplot.reset();
                 }
 
-                text: qsTr("Change unit to " + (useRad ? '°/s' : 'rad/s'))
+                text: i18n.tr("Change unit to " + (useRad ? '°/s' : 'rad/s'))
                 onClicked: toggleUnit()
             }
         }
@@ -118,7 +131,7 @@ Page {
                 PlotWidget {
                     id: xplot
                     width: parent.width
-                    height: 150
+                    height: units.gu(10)
                     plotColor: Theme.highlightColor
                     scaleColor: Theme.secondaryHighlightColor
                 }
@@ -137,7 +150,7 @@ Page {
                 PlotWidget {
                     id: yplot
                     width: parent.width
-                    height: 150
+                    height: units.gu(10)
                     plotColor: Theme.highlightColor
                     scaleColor: Theme.secondaryHighlightColor
                 }
@@ -156,7 +169,7 @@ Page {
                 PlotWidget {
                     id: zplot
                     width: parent.width
-                    height: 150
+                    height: units.gu(10)
                     plotColor: Theme.highlightColor
                     scaleColor: Theme.secondaryHighlightColor
                 }
@@ -164,5 +177,3 @@ Page {
         }
     }
 }
-
-

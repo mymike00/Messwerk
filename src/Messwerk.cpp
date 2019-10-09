@@ -10,7 +10,7 @@
 #include <QTimer>
 #include <QGeoSatelliteInfoSource>
 #include <QQuickStyle>
-#include <QQmlApplicationEngine> 
+#include <QQmlApplicationEngine>
 #include <QCoreApplication>
 #include <QGuiApplication>
 
@@ -39,13 +39,11 @@ int main(int argc, char *argv[])
 
     QGuiApplication *app = new QGuiApplication(argc, (char**)argv);
     app->setApplicationName("harbour-messwerk.mymike00");
-    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-qputenv("QT_SCALE_FACTOR", "2.0");
+    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
 
     QQmlApplicationEngine engine;
-            QQuickStyle::setStyle("Suru");
+    QQuickStyle::setStyle("Suru");
 
     qmlRegisterType<PlotWidget>("harbour.messwerk.MesswerkWidgets", 1, 0, "PlotWidget");
     qmlRegisterType<SatellitePosWidget>("harbour.messwerk.MesswerkWidgets", 1, 0, "SatellitePosWidget");

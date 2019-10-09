@@ -1,5 +1,6 @@
 import QtQuick 2.9
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.2
+import Ubuntu.Components 1.3 as UITK
 import harbour.messwerk.MesswerkWidgets 1.0
 
 import "../Constants.js" as Constants
@@ -7,7 +8,15 @@ import "../Theme.js" as Theme
 
 Page {
     id: page
-    header: Label { text: qsTr("Position") }
+    header: UITK.PageHeader {
+        id: pageH
+        title: i18n.tr("Position")
+        navigationActions: UITK.Action {
+            iconName: "back"
+            text: i18n.tr('Back')
+            onTriggered: page.StackView.view.pop();
+        }
+    }
 
     property bool decimalCoord: true;
 
@@ -85,7 +94,11 @@ Page {
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
     Flickable {
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            topMargin: units.gu(2)
+            bottomMargin: units.gu(2)
+        }
 
         // Tell SilicaFlickable the height of its content.
         contentHeight: column.height
@@ -96,7 +109,7 @@ Page {
                     decimalCoord = !decimalCoord;
                 }
 
-                text: qsTr("Coordinate format: ") + (decimalCoord ? qsTr("deg./min./sec.") : qsTr("decimal"))
+                text: i18n.tr("Coordinate format: ") + (decimalCoord ? i18n.tr("deg./min./sec.") : i18n.tr("decimal"))
                 onClicked: nextCoordFormat()
             }
             MenuItem {
@@ -108,7 +121,7 @@ Page {
                     }
                 }
 
-                text: qsTr("Position: ") + (positionsensor.isLogging ? qsTr("Stop") : qsTr("Start")) + qsTr(" logging")
+                text: i18n.tr("Position: ") + (positionsensor.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
                 onClicked: togglePositionLogging()
             }
         }
@@ -122,7 +135,7 @@ Page {
             spacing: Theme.paddingLarge
 
             Label {
-                text: qsTr("WGS84 Coordinates")
+                text: i18n.tr("WGS84 Coordinates")
             }
             Column {
                 width: parent.width
@@ -133,32 +146,32 @@ Page {
                     font.pixelSize: Theme.fontSizeLarge
                     anchors.right: parent.right
                     anchors.rightMargin: Theme.paddingLarge
-                    text: qsTr('Fix: ') + page.formatFix(positionsensor.coordType)
+                    text: i18n.tr('Fix: ') + page.formatFix(positionsensor.coordType)
                 }
                 Label {
                     id: latlabel
                     font.pixelSize: Theme.fontSizeLarge
                     anchors.right: parent.right
                     anchors.rightMargin: Theme.paddingLarge
-                    text: qsTr('Latitude: ') + page.formatCoordinate(positionsensor.latitude, false)
+                    text: i18n.tr('Latitude: ') + page.formatCoordinate(positionsensor.latitude, false)
                 }
                 Label {
                     id: lonlabel
                     font.pixelSize: Theme.fontSizeLarge
                     anchors.right: parent.right
                     anchors.rightMargin: Theme.paddingLarge
-                    text: qsTr('Longitude: ') + page.formatCoordinate(positionsensor.longitude, true)
+                    text: i18n.tr('Longitude: ') + page.formatCoordinate(positionsensor.longitude, true)
                 }
                 Label {
                     id: altlabel
                     font.pixelSize: Theme.fontSizeLarge
                     anchors.right: parent.right
                     anchors.rightMargin: Theme.paddingLarge
-                    text: qsTr('Altitude: ') + page.formatAltitude(positionsensor.altitude)
+                    text: i18n.tr('Altitude: ') + page.formatAltitude(positionsensor.altitude)
                 }
             }
             Label {
-                text: qsTr("Accuracy")
+                text: i18n.tr("Accuracy")
             }
             Column {
                 width: parent.width
@@ -169,18 +182,18 @@ Page {
                     font.pixelSize: Theme.fontSizeLarge
                     anchors.right: parent.right
                     anchors.rightMargin: Theme.paddingLarge
-                    text: qsTr('Horizontal: ') + page.formatAccuracy(positionsensor.horzAccuracy)
+                    text: i18n.tr('Horizontal: ') + page.formatAccuracy(positionsensor.horzAccuracy)
                 }
                 Label {
                     id: vertAccLabel
                     font.pixelSize: Theme.fontSizeLarge
                     anchors.right: parent.right
                     anchors.rightMargin: Theme.paddingLarge
-                    text: qsTr('Vertical: ') + page.formatAccuracy(positionsensor.vertAccuracy)
+                    text: i18n.tr('Vertical: ') + page.formatAccuracy(positionsensor.vertAccuracy)
                 }
             }
             Label {
-                text: qsTr("Maidenhead Locator")
+                text: i18n.tr("Maidenhead Locator")
             }
             Column {
                 width: parent.width
@@ -191,11 +204,9 @@ Page {
                     font.pixelSize: Theme.fontSizeLarge
                     anchors.right: parent.right
                     anchors.rightMargin: Theme.paddingLarge
-                    text: qsTr('Grid: ') + '<b>' + positionsensor.maidenhead + '</b>'
+                    text: i18n.tr('Grid: ') + '<b>' + positionsensor.maidenhead + '</b>'
                 }
             }
         }
     }
 }
-
-

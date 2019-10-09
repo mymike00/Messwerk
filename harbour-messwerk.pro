@@ -24,6 +24,17 @@ UBUNTU_MANIFEST_FILE=manifest.json.in
 # app name in the manifest file
 UBUNTU_TRANSLATION_DOMAIN="harbour-messwerk.mymike00"
 
+# specify the source files that should be included into
+# the translation file, from those files a translation
+# template is created in po/template.pot, to create a
+# translation copy the template to e.g. de.po and edit the sources
+UBUNTU_TRANSLATION_SOURCES+= \
+    $$files(qml/pages/*.qml,true)
+
+# specifies all translations files and makes sure they are
+# compiled and installed into the right place in the click package
+UBUNTU_PO_FILES+=$$files(po/*.po)
+
 QT += sensors positioning gui qml quick
 
 # specifies all translations files and makes sure they are
@@ -57,7 +68,7 @@ RESOURCES += harbour-messwerk.qrc
 
 OTHER_FILES = harbour-messwerk.apparmor \
               harbour-messwerk.desktop \
-              harbour-messwerk.png
+              harbour-messwerk.svg
 
 config_files.path = /
 config_files.files = $${OTHER_FILES}
@@ -67,12 +78,6 @@ INSTALLS += config_files
 # Default rules for deployment.
 target.path = /
 INSTALLS+=target
-
-# to disable building translations every time, comment out the
-# following CONFIG line
-TRANSLATIONS += translations/messwerk-de.ts \
-    translations/messwerk-pl.ts \
-    translations/messwerk-sv.ts
 
 HEADERS += \
     src/accelerometer.h \

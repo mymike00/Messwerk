@@ -1,8 +1,9 @@
-var paddingSmall = 20;
-var paddingLarge = 40;
+var paddingSmall = units.gu(1);
+var paddingLarge = units.gu(2);
 
-var fontSizeLarge = 20;
+var fontSizeLarge = units.gu(2);
 
 var highlightColor = "orange";
 var secondaryHighlightColor = "purple";
-
+var secondaryColor = "blue";
+var primaryColor = "lightblue"
