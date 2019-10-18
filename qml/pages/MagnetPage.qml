@@ -18,6 +18,23 @@ Page {
         }
     }
 
+    Menu {
+        id: menu
+        x: parent.width - width
+        MenuItem {
+            function toggleLogging() {
+                if(magnetometer.isLogging) {
+                    magnetometer.stopLogging();
+                } else {
+                    magnetometer.startLogging();
+                }
+            }
+
+            text: (magnetometer.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
+            onClicked: toggleLogging()
+        }
+        }
+
     function formatNumber(n) {
         n *= 1e3;
 
@@ -67,24 +84,9 @@ Page {
             bottomMargin: units.gu(2)
         }
 
-        // Tell SilicaFlickable the height of its content.
+        // Tell Flickable the height of its content.
         contentHeight: column.height
-/*
-        PullDownMenu {
-            MenuItem {
-                function toggleLogging() {
-                    if(magnetometer.isLogging) {
-                        magnetometer.stopLogging();
-                    } else {
-                        magnetometer.startLogging();
-                    }
-                }
 
-                text: (magnetometer.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
-                onClicked: toggleLogging()
-            }
-        }
-*/
         // Place our content in a Column.  The PageHeader is always placed at the top
         // of the page, followed by our content.
         Column {

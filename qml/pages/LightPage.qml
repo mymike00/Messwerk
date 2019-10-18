@@ -16,6 +16,41 @@ Page {
             text: i18n.tr('Back')
             onTriggered: page.StackView.view.pop();
         }
+        trailingActionBar.actions: [
+            UITK.Action {
+                onTriggered: !menu.visible ? menu.open() : menu.close()
+                iconName: "contextual-menu"
+            }
+        ]
+    }
+
+    Menu {
+        id: menu
+        x: parent.width - width
+        MenuItem {
+            function toggleLightLogging() {
+                if(lightsensor.isLogging) {
+                    lightsensor.stopLogging();
+                } else {
+                    lightsensor.startLogging();
+                }
+            }
+
+            text: i18n.tr("Light sensor: ") + (lightsensor.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
+            onClicked: toggleLightLogging()
+        }
+        MenuItem {
+            function toggleProximityLogging() {
+                if(proximitysensor.isLogging) {
+                    proximitysensor.stopLogging();
+                } else {
+                    proximitysensor.startLogging();
+                }
+            }
+
+            text: i18n.tr("Proximity sensor: ") + (proximitysensor.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
+            onClicked: toggleProximityLogging()
+        }
     }
 
     function formatNumber(n) {
@@ -48,36 +83,9 @@ Page {
             bottomMargin: units.gu(2)
         }
 
-        // Tell SilicaFlickable the height of its content.
+        // Tell Flickable the height of its content.
         contentHeight: column.height
-/*
-        PullDownMenu {
-            MenuItem {
-                function toggleLightLogging() {
-                    if(lightsensor.isLogging) {
-                        lightsensor.stopLogging();
-                    } else {
-                        lightsensor.startLogging();
-                    }
-                }
 
-                text: i18n.tr("Light sensor: ") + (lightsensor.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
-                onClicked: toggleLightLogging()
-            }
-            MenuItem {
-                function toggleProximityLogging() {
-                    if(proximitysensor.isLogging) {
-                        proximitysensor.stopLogging();
-                    } else {
-                        proximitysensor.startLogging();
-                    }
-                }
-
-                text: i18n.tr("Proximity sensor: ") + (proximitysensor.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
-                onClicked: toggleProximityLogging()
-            }
-        }
-*/
         // Place our content in a Column.  The PageHeader is always placed at the top
         // of the page, followed by our content.
         Column {

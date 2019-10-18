@@ -3,6 +3,7 @@
 
 #include <QSettings>
 #include <QDir>
+#include <QStandardPaths>
 
 class Settings : public QObject
 {
@@ -27,7 +28,7 @@ public:
         return theSettings;
     }
 
-    QString getLoggingPath(void) { return m_settings->value("LoggingPath", QDir::home().absolutePath()).toString(); }
+    QString getLoggingPath(void) { return m_settings->value("LoggingPath", QStandardPaths::writableLocation(QStandardPaths::CacheLocation)).toString(); }
     bool getPreventDisplayBlanking(void) { return m_settings->value("PreventDisplayBlanking", false).toBool(); }
 
     bool getIsHarbourVersion(void)

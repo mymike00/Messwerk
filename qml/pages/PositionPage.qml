@@ -16,6 +16,37 @@ Page {
             text: i18n.tr('Back')
             onTriggered: page.StackView.view.pop();
         }
+        trailingActionBar.actions: [
+            UITK.Action {
+                onTriggered: !menu.visible ? menu.open() : menu.close()
+                iconName: "contextual-menu"
+            }
+        ]
+    }
+
+    Menu {
+        id: menu
+        x: parent.width - width
+        MenuItem {
+            function nextCoordFormat() {
+                decimalCoord = !decimalCoord;
+            }
+
+            text: i18n.tr("Coordinate format: ") + (decimalCoord ? i18n.tr("deg./min./sec.") : i18n.tr("decimal"))
+            onClicked: nextCoordFormat()
+        }
+        MenuItem {
+            function togglePositionLogging() {
+                if(positionsensor.isLogging) {
+                    positionsensor.stopLogging();
+                } else {
+                    positionsensor.startLogging();
+                }
+            }
+
+            text: i18n.tr("Position: ") + (positionsensor.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
+            onClicked: togglePositionLogging()
+        }
     }
 
     property bool decimalCoord: true;
@@ -100,32 +131,9 @@ Page {
             bottomMargin: units.gu(2)
         }
 
-        // Tell SilicaFlickable the height of its content.
+        // Tell Flickable the height of its content.
         contentHeight: column.height
-/*
-        PullDownMenu {
-            MenuItem {
-                function nextCoordFormat() {
-                    decimalCoord = !decimalCoord;
-                }
 
-                text: i18n.tr("Coordinate format: ") + (decimalCoord ? i18n.tr("deg./min./sec.") : i18n.tr("decimal"))
-                onClicked: nextCoordFormat()
-            }
-            MenuItem {
-                function togglePositionLogging() {
-                    if(positionsensor.isLogging) {
-                        positionsensor.stopLogging();
-                    } else {
-                        positionsensor.startLogging();
-                    }
-                }
-
-                text: i18n.tr("Position: ") + (positionsensor.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
-                onClicked: togglePositionLogging()
-            }
-        }
-*/
         // Place our content in a Column.  The PageHeader is always placed at the top
         // of the page, followed by our content.
         Column {

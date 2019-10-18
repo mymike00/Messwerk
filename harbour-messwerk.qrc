@@ -14,5 +14,6 @@
       <file>qml/pages/PositionPage.qml</file>
       <file>qml/Theme.js</file>
       <file>qml/Constants.js</file>
+      <file>harbour-messwerk.png</file>
    </qresource>
 </RCC>

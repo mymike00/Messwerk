@@ -16,6 +16,41 @@ Page {
             text: i18n.tr('Back')
             onTriggered: page.StackView.view.pop();
         }
+        trailingActionBar.actions: [
+            UITK.Action {
+                onTriggered: !menu.visible ? menu.open() : menu.close()
+                iconName: "contextual-menu"
+            }
+        ]
+    }
+    
+    Menu {
+        id: menu
+        x: parent.width - width
+        MenuItem {
+            function toggleLogging() {
+                if(accelerometer.isLogging) {
+                    accelerometer.stopLogging();
+                } else {
+                    accelerometer.startLogging();
+                }
+            }
+
+            text: (accelerometer.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
+            onClicked: toggleLogging()
+        }
+        MenuItem {
+            function toggleUnit() {
+                useGs = !useGs;
+
+                xplot.reset();
+                yplot.reset();
+                zplot.reset();
+            }
+
+            text: i18n.tr("Change unit to " + (useGs ? 'm/s²' : 'g'))
+            onClicked: toggleUnit()
+        }
     }
 
     property bool useGs: false;
@@ -69,43 +104,14 @@ Page {
         accelerometer.deactivate(Constants.PART_PAGE)
     }
 
-    // To enable PullDownMenu, place our content in a SilicaFlickable
     Flickable {
         anchors {
             fill: parent
             topMargin: units.gu(2)
             bottomMargin: units.gu(2)
         }
-/*
-        // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
-        PullDownMenu {
-            MenuItem {
-                function toggleLogging() {
-                    if(accelerometer.isLogging) {
-                        accelerometer.stopLogging();
-                    } else {
-                        accelerometer.startLogging();
-                    }
-                }
 
-                text: (accelerometer.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
-                onClicked: toggleLogging()
-            }
-            MenuItem {
-                function toggleUnit() {
-                    useGs = !useGs;
-
-                    xplot.reset();
-                    yplot.reset();
-                    zplot.reset();
-                }
-
-                text: i18n.tr("Change unit to " + (useGs ? 'm/s²' : 'g'))
-                onClicked: toggleUnit()
-            }
-        }
-*/
-        // Tell SilicaFlickable the height of its content.
+        // Tell Flickable the height of its content.
         contentHeight: column.height
 
         // Place our content in a Column.  The PageHeader is always placed at the top

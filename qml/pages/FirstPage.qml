@@ -12,7 +12,7 @@ Page {
         id: pageH
         title: i18n.tr("Select Sensor")
         trailingActionBar.actions: [
-            // UITK.Action {
+            // UITK.Action {    //FIXME
             //     text: i18n.tr("Settings")
             //     iconName: "settings"
             //     onTriggered: pageStackView.push(Qt.resolvedUrl("SettingsDialog.qml"))
@@ -41,7 +41,6 @@ Page {
 
             width: page.width
             spacing: Theme.paddingLarge
-            // padding: Theme.paddingSmall
 
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter

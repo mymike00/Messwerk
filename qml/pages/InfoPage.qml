@@ -30,6 +30,12 @@ Page {
 
             width: page.width
             spacing: Theme.paddingLarge
+            UITK.ProportionalShape {
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: units.gu(15)
+                aspect: UITK.UbuntuShape.DropShadow
+                source: Image { source: "qrc:/harbour-messwerk.png" }
+            }
 
             Label {
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -85,6 +91,16 @@ Page {
                     text: "<a href=\"https://github.com/mymike00/\">Michele</a>"
                     onLinkActivated: Qt.openUrlExternally(link)
                 }
+            }
+            Label {
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                }
+                text: i18n.tr("Note: log files are saved to %1").arg(settings.loggingPath)
+                wrapMode: Text.Wrap
+                horizontalAlignment: Text.AlignHCenter
+                opacity: 0.7
             }
         }
     }
