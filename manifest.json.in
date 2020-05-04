@@ -1,7 +1,7 @@
 {
     "name": "harbour-messwerk.mymike00",
     "description": "An Application for reading Sensors, ported from SFOS",
-    "architecture": "armhf",
+    "architecture": "@CLICK_ARCH@",
     "title": "MessWerk",
     "hooks": {
         "harbour-messwerk": {
