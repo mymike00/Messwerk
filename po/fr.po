@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-18 09:31+0000\n"
+"PO-Revision-Date: 2019-10-20 13:15+0000\n"
+"Last-Translator: Anne017 <anneonyme017@openmailbox.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/AccelPage.qml:13
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:65
+msgid "Accelerometer"
+msgstr "Accéléromètre"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/AccelPage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/GyroPage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:51
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/MagnetPage.qml:33
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:47
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PressurePage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/RotationPage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SatellitePage.qml:40
+msgid "Stop"
+msgstr "Arrêter"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/AccelPage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/GyroPage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:51
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/MagnetPage.qml:33
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:47
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PressurePage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/RotationPage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SatellitePage.qml:40
+msgid "Start"
+msgstr "Démarrer"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/AccelPage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/GyroPage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:51
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/MagnetPage.qml:33
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:47
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PressurePage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/RotationPage.qml:39
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SatellitePage.qml:40
+msgid " logging"
+msgstr " l'enregistrement"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/AccelPage.qml:51
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/GyroPage.qml:51
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/RotationPage.qml:51
+msgid "Change unit to "
+msgstr "Changer l'unité en "
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:13
+msgid "Select Sensor"
+msgstr "Sélectionnez un capteur"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:21
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:11
+msgid "Info"
+msgstr "Informations"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:47
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:13
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SatellitePage.qml:14
+msgid "Position"
+msgstr "Position"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:53
+msgid "GNSS Satellites"
+msgstr "Positionnement par satellites"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:59
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/RotationPage.qml:13
+msgid "Rotation"
+msgstr "Rotation"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:71
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/GyroPage.qml:13
+msgid "Gyroscope"
+msgstr "Gyroscope"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:77
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/MagnetPage.qml:13
+msgid "Magnetometer"
+msgstr "Magnétomètre"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:83
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:13
+msgid "Light & Proximity"
+msgstr "Luminosité & Proximité"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:89
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PressurePage.qml:13
+msgid "Pressure Sensor"
+msgstr "Capteur de pression"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:42
+msgid "Created by bytewerk™ Software Inc."
+msgstr "Créé par bytewerk™ Software Inc."
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:47
+msgid "Send beer, pizza and Club Mate to"
+msgstr "Envoyez des bières, des pizzas et du Club maté à"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:56
+msgid "source code"
+msgstr "Code source"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:61
+msgid "Credits"
+msgstr "Remerciements"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:68
+msgid "Coding: "
+msgstr "Code : "
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:72
+msgid "Quality assurance: "
+msgstr "Assurance qualité : "
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:76
+msgid "Art & Design: "
+msgstr "Illustrations et conception : "
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:81
+msgid "Translations: "
+msgstr "Traductions : "
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:86
+msgid "Port to Ubuntu Touch: "
+msgstr "Portage vers Ubuntu Touch : "
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:100
+#, qt-format
+msgid "Note: log files are saved to %1"
+msgstr "Note : les journaux sont enregistrés sous %1"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:39
+msgid "Light sensor: "
+msgstr "Capteur de luminosité : "
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:51
+msgid "Proximity sensor: "
+msgstr "Capteur de proximité : "
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:98
+msgid "Brightness"
+msgstr "Luminosité"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:120
+msgid "Proximity"
+msgstr "Proximité"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:35
+msgid "Coordinate format: "
+msgstr "Format de coordonnées : "
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:35
+msgid "deg./min./sec."
+msgstr "deg./min./sec."
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:35
+msgid "decimal"
+msgstr "décimal"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:47
+msgid "Position: "
+msgstr "Position : "
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:146
+msgid "WGS84 Coordinates"
+msgstr "Coordonnées WGS84"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:182
+msgid "Accuracy"
+msgstr "Précision"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:204
+msgid "Maidenhead Locator"
+msgstr "Système de localisation Maidenhead"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SettingsDialog.qml:11
+msgid "Logging"
+msgstr "Enregistrement"
+
+#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SettingsDialog.qml:29
+#, qt-format
+msgid ""
+"Path for sensor logs:\n"
+"%1"
+msgstr ""
+"Chemin vers les journaux des capteurs :\n"
+"%1"
