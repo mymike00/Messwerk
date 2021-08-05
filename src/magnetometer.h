@@ -32,6 +32,8 @@ class Magnetometer : public Sensor
     public slots:
         void refresh(void);
         void logValues(void);
+        void restart(void);
+        void setReturnGeoValues(bool returnGeoValues);
 
     signals:
         void mxChanged(void);
