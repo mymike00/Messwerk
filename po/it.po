@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-18 09:31+0000\n"
+"POT-Creation-Date: 2025-08-25 23:58+0000\n"
 "PO-Revision-Date: 2019-09-28 10:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,189 +18,189 @@ msgstr ""
 "X-Generator: Poedit 2.2.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/AccelPage.qml:13
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:65
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/AccelPage.qml:13
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/FirstPage.qml:65
 msgid "Accelerometer"
 msgstr "Accelerometro"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/AccelPage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/GyroPage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:51
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/MagnetPage.qml:33
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:47
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PressurePage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/RotationPage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SatellitePage.qml:40
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/AccelPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/GyroPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/LightPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/LightPage.qml:51
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/MagnetPage.qml:33
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PositionPage.qml:47
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PressurePage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/RotationPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/SatellitePage.qml:40
 msgid "Stop"
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/AccelPage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/GyroPage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:51
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/MagnetPage.qml:33
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:47
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PressurePage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/RotationPage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SatellitePage.qml:40
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/AccelPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/GyroPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/LightPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/LightPage.qml:51
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/MagnetPage.qml:33
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PositionPage.qml:47
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PressurePage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/RotationPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/SatellitePage.qml:40
 msgid "Start"
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/AccelPage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/GyroPage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:51
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/MagnetPage.qml:33
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:47
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PressurePage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/RotationPage.qml:39
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SatellitePage.qml:40
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/AccelPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/GyroPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/LightPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/LightPage.qml:51
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/MagnetPage.qml:33
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PositionPage.qml:47
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PressurePage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/RotationPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/SatellitePage.qml:40
 msgid " logging"
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/AccelPage.qml:51
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/GyroPage.qml:51
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/RotationPage.qml:51
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/AccelPage.qml:51
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/GyroPage.qml:51
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/RotationPage.qml:51
 msgid "Change unit to "
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:13
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/FirstPage.qml:13
 msgid "Select Sensor"
 msgstr "Seleziona Sensore"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:21
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:11
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/FirstPage.qml:21
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/InfoPage.qml:11
 msgid "Info"
 msgstr "Info"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:47
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:13
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SatellitePage.qml:14
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/FirstPage.qml:47
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PositionPage.qml:13
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/SatellitePage.qml:14
 msgid "Position"
 msgstr "Posizione"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:53
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/FirstPage.qml:53
 msgid "GNSS Satellites"
 msgstr "Satelliti GNSS"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:59
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/RotationPage.qml:13
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/FirstPage.qml:59
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/RotationPage.qml:13
 msgid "Rotation"
 msgstr "Rotazione"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:71
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/GyroPage.qml:13
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/FirstPage.qml:71
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/GyroPage.qml:13
 msgid "Gyroscope"
 msgstr "Giroscopio"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:77
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/MagnetPage.qml:13
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/FirstPage.qml:77
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/MagnetPage.qml:13
 msgid "Magnetometer"
 msgstr "Magnetometro"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:83
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:13
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/FirstPage.qml:83
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/LightPage.qml:13
 msgid "Light & Proximity"
 msgstr "Luce & Prossimità"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/FirstPage.qml:89
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PressurePage.qml:13
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/FirstPage.qml:89
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PressurePage.qml:13
 msgid "Pressure Sensor"
 msgstr "Sensore di Pressione"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:42
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/InfoPage.qml:42
 msgid "Created by bytewerk™ Software Inc."
 msgstr "Creato da bytewerk™ Software Inc."
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:47
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/InfoPage.qml:47
 msgid "Send beer, pizza and Club Mate to"
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:56
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/InfoPage.qml:56
 msgid "source code"
 msgstr "codice sorgente"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:61
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/InfoPage.qml:61
 msgid "Credits"
 msgstr "Crediti"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:68
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/InfoPage.qml:68
 msgid "Coding: "
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:72
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/InfoPage.qml:72
 msgid "Quality assurance: "
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:76
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/InfoPage.qml:76
 msgid "Art & Design: "
 msgstr "Arte & Design: "
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:81
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/InfoPage.qml:81
 msgid "Translations: "
 msgstr "Traduzioni: "
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:86
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/InfoPage.qml:86
 msgid "Port to Ubuntu Touch: "
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/InfoPage.qml:100
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/InfoPage.qml:100
 #, qt-format
 msgid "Note: log files are saved to %1"
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:39
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/LightPage.qml:39
 msgid "Light sensor: "
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:51
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/LightPage.qml:51
 #, fuzzy
 msgid "Proximity sensor: "
 msgstr "Prossimità"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:98
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/LightPage.qml:98
 msgid "Brightness"
 msgstr "Luminosità"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/LightPage.qml:120
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/LightPage.qml:120
 msgid "Proximity"
 msgstr "Prossimità"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:35
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PositionPage.qml:35
 msgid "Coordinate format: "
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:35
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PositionPage.qml:35
 msgid "deg./min./sec."
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:35
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PositionPage.qml:35
 msgid "decimal"
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:47
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PositionPage.qml:47
 #, fuzzy
 msgid "Position: "
 msgstr "Posizione"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:146
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PositionPage.qml:146
 msgid "WGS84 Coordinates"
 msgstr "Coordinate WGS84"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:182
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PositionPage.qml:182
 msgid "Accuracy"
 msgstr "Accuratezza"
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/PositionPage.qml:204
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/PositionPage.qml:204
 msgid "Maidenhead Locator"
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SettingsDialog.qml:11
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/SettingsDialog.qml:11
 msgid "Logging"
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/Messwerk/qml/pages/SettingsDialog.qml:29
+#: /home/alaskalinuxuser/clickables/myforks/Messwerk/qml/pages/SettingsDialog.qml:29
 #, qt-format
 msgid ""
 "Path for sensor logs:\n"
