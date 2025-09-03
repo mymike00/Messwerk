@@ -70,7 +70,7 @@ Page {
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Gyroscope")
                 onClicked: pageStackView.push(Qt.resolvedUrl("GyroPage.qml"))
-                highlighted: gyroscope.isLogging
+//                highlighted: gyroscope.isLogging
             }
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter

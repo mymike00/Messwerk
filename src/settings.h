@@ -46,6 +46,15 @@ public slots:
         m_settings->setValue("LoggingPath", path);
         emit loggingPathChanged(path);
     }
+    void setLoggingPathUT(const int &path)
+    {
+        switch (path) {
+            case 0: setLoggingPath(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation)); break;
+            case 1: setLoggingPath(QStandardPaths::writableLocation(QStandardPaths::CacheLocation)); break;
+            case 2: setLoggingPath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)); break;
+        }
+        emit loggingPathChanged(getLoggingPath());
+    }
 
     void setPreventDisplayBlanking(bool prevent)
     {

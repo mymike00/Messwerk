@@ -13,7 +13,7 @@
 #include <QQmlApplicationEngine>
 #include <QCoreApplication>
 #include <QGuiApplication>
-
+#include <QThread>
 
 
 #include "accelerometer.h"
@@ -53,6 +53,10 @@ int main(int argc, char *argv[])
 
     Accelerometer accelerometer(false);
     Gyroscope gyroscope(false);
+    QThread gyroThread;
+    gyroscope.moveToThread(&gyroThread);
+    GyroscopeBridge gyroBridge(dynamic_cast<Sensor*>(&gyroscope));
+    gyroThread.start();
     Magnetometer magnetometer(false);
     Rotation rotation(false);
     Light light(false);
@@ -70,7 +74,7 @@ int main(int argc, char *argv[])
     QObject::connect(&refreshTimer, SIGNAL(timeout()), &light, SLOT(refresh()));
 
     engine.rootContext()->setContextProperty("accelerometer", &accelerometer);
-    engine.rootContext()->setContextProperty("gyroscope", &gyroscope);
+    engine.rootContext()->setContextProperty("gyroscope", &gyroBridge);
     engine.rootContext()->setContextProperty("magnetometer", &magnetometer);
     engine.rootContext()->setContextProperty("rotationsensor", &rotation);
     engine.rootContext()->setContextProperty("lightsensor", &light);
@@ -84,6 +88,9 @@ int main(int argc, char *argv[])
     refreshTimer.start(100);
 
     result = app->exec();
+
+    gyroThread.quit();
+    gyroThread.wait();
 
     return result;
 }

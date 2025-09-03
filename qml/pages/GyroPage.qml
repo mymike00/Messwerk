@@ -28,16 +28,17 @@ Page {
         id: menu
         x: parent.width - width
         MenuItem {
-            function toggleLogging() {
-                if(gyroscope.isLogging) {
-                    gyroscope.stopLogging();
-                } else {
-                    gyroscope.startLogging();
-                }
-            }
+//            function toggleLogging() {
+//                if(gyroscope.isLogging) {
+//                    gyroscope.stopLogging();
+//                } else {
+//                    gyroscope.startLogging();
+//                }
+//            }
 
-            text: (gyroscope.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
-            onClicked: toggleLogging()
+            text: i18n.tr("Start/Stop logging")
+//            text: (gyroscope.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
+            onClicked: gyroscope.toggleLogging()
         }
         MenuItem {
             function toggleUnit() {
@@ -75,19 +76,22 @@ Page {
         return '<b>' + convertNumber(n).toFixed(3) + ' ' + unit + '</b>';
     }
 
-    function updateXPlot() {
-        xplot.addValue(convertNumber(gyroscope.rx));
+    function updateXPlot(rx) {
+        xplot.addValue(convertNumber(rx));
         xplot.update();
+        xlabel.text = 'X: ' + page.formatNumber(rx)
     }
 
-    function updateYPlot() {
-        yplot.addValue(convertNumber(gyroscope.ry));
+    function updateYPlot(ry) {
+        yplot.addValue(convertNumber(ry));
         yplot.update();
+        ylabel.text = 'Y: ' + page.formatNumber(ry)
     }
 
-    function updateZPlot() {
-        zplot.addValue(convertNumber(gyroscope.rz));
+    function updateZPlot(rz) {
+        zplot.addValue(convertNumber(rz));
         zplot.update();
+        zlabel.text = 'Z: ' + page.formatNumber(rz)
     }
 
     Component.onCompleted: {
@@ -132,7 +136,6 @@ Page {
                     font.pixelSize: Theme.fontSizeLarge
                     anchors.right: parent.right
                     anchors.rightMargin: Theme.paddingLarge
-                    text: 'X: ' + page.formatNumber(gyroscope.rx)
                 }
                 PlotWidget {
                     id: xplot
@@ -151,7 +154,6 @@ Page {
                     font.pixelSize: Theme.fontSizeLarge
                     anchors.right: parent.right
                     anchors.rightMargin: Theme.paddingLarge
-                    text: 'Y: ' + page.formatNumber(gyroscope.ry)
                 }
                 PlotWidget {
                     id: yplot
@@ -170,7 +172,6 @@ Page {
                     font.pixelSize: Theme.fontSizeLarge
                     anchors.right: parent.right
                     anchors.rightMargin: Theme.paddingLarge
-                    text: 'Z: ' + page.formatNumber(gyroscope.rz)
                 }
                 PlotWidget {
                     id: zplot
