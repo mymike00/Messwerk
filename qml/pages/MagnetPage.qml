@@ -16,11 +16,32 @@ Page {
             text: i18n.tr('Back')
             onTriggered: page.StackView.view.pop();
         }
+        trailingActionBar.actions: [
+            UITK.Action {
+                onTriggered: !menu.visible ? menu.open() : menu.close()
+                iconName: "contextual-menu"
+            }
+        ]
     }
 
     Menu {
         id: menu
         x: parent.width - width
+        MenuItem {
+            function toggleReturnGeoValues() {
+                returnGeoValues = !returnGeoValues;
+                
+                magnetometer.setReturnGeoValues(returnGeoValues);
+                magnetometer.restart();
+
+                xplot.reset();
+                yplot.reset();
+                zplot.reset();
+            }
+
+            text: i18n.tr("Show ") + (returnGeoValues ? i18n.tr("raw") : i18n.tr("calibrated")) + i18n.tr(" readings")
+            onClicked: toggleReturnGeoValues()
+        }        
         MenuItem {
             function toggleLogging() {
                 if(magnetometer.isLogging) {
@@ -33,7 +54,9 @@ Page {
             text: (magnetometer.isLogging ? i18n.tr("Stop") : i18n.tr("Start")) + i18n.tr(" logging")
             onClicked: toggleLogging()
         }
-        }
+    }
+
+    property bool returnGeoValues: true;
 
     function formatNumber(n) {
         n *= 1e3;
@@ -62,7 +85,8 @@ Page {
         zplot.update();
     }
 
-    Component.onCompleted: {
+    Component.onCompleted: {   
+        magnetometer.setReturnGeoValues(returnGeoValues);     
         magnetometer.activate(Constants.PART_PAGE);
         magnetometer.mxChanged.connect(updateXPlot);
         magnetometer.myChanged.connect(updateYPlot);

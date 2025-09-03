@@ -38,6 +38,21 @@ void Magnetometer::logValues(void)
     }
 }
 
+void Magnetometer::restart(void)
+{
+    QMagnetometer *magnetometer = dynamic_cast<QMagnetometer*>(m_sensor);
+    
+    magnetometer->stop();
+    magnetometer->start();
+}
+
+void Magnetometer::setReturnGeoValues(bool returnGeoValues)
+{
+    QMagnetometer *magnetometer = dynamic_cast<QMagnetometer*>(m_sensor);
+
+    magnetometer->setReturnGeoValues(returnGeoValues);    
+}
+
 void Magnetometer::refresh(void)
 {
     if(!m_sensor->isActive()) {
